@@ -171,23 +171,55 @@ If the condition evaluates to true, the first expression executes.
 If the condition evaluates to false, the second expression executes.
 Like if...else statements, ternary operators can be used for conditions which evaluate to true or false.
 
+- Else If Statements
+
+We can add more conditions to our if...else with an else if statement. 
+The else if statement allows for more than two possible outcomes. 
+You can add as many else if statements as you’d like, to make more complex conditionals!
+
+The else if statement always comes after the if statement and before the else statement. 
+The else if statement also takes a condition. Let’s take a look at the syntax:
+
+let stopLight = 'yellow';
+
+if (stopLight === 'red') {
+  console.log('Stop!');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down.');
+} else if (stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+
+- The switch keyword
+
+imagine if we needed to check 100 different values! Having to write that many else if statements sounds like a pain!
+
+A switch statement provides an alternative syntax that is easier to read and write. A switch statement looks like this:
+
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
+
+// Prints 'Papayas are $1.29'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+At the end of each switch statement, there is a default statement. 
+If none of the cases are true, then the code in the default statement will run.
 
 
 
