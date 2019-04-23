@@ -1,0 +1,75 @@
+In programming, we often use code to perform a specific task multiple times. 
+Instead of rewriting the same code, we can group a block of code together and associate it with one task, 
+then we can reuse that block of code whenever we need to perform the task again. 
+We achieve this by creating a function. 
+A function is a reusable block of code that groups together a sequence of statements to perform a specific task.
+
+- Function Declarations
+
+n JavaScript, there are many ways to create a function. 
+One way to create a function is by using a function declaration. 
+a variable declaration binds a value to a variable name, a function declaration binds a function to a name, or an identifier.
+
+A function declaration consists of:
+
+The function keyword.
+The name of the function, or its identifier, followed by parentheses.
+A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }.
+
+function getReminder() {
+  console.log('Water the plants.')
+}
+
+- Calling a Function
+
+a function declaration does not ask the code inside the function body to run, it just declares the existence of the function. 
+The code inside a function body runs, or executes, only when the function is called. 
+To call a function in your code, you type the function name followed by parentheses.
+
+This function call executes the function body, or all of the statements between the curly braces in the function declaration.
+
+- Parameters and Arguments
+
+some functions can take inputs and use the inputs to perform a task.
+When declaring a function, we can specify its parameters. 
+Parameters allow functions to accept input(s) and perform a task using the input(s). 
+We use parameters as placeholders for information that will be passed to the function when it is called.
+
+function Area (width, height) {
+   console.log(width * height);
+}
+
+When calling a function that has parameters, we specify the values in the parentheses that follow the function name. 
+The values that are passed to the function when it is called are called arguments. 
+Arguments can be passed to the function as values or variables.
+
+Area(10, 6):
+
+# 60
+
+Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared.
+
+function sayThanks(name) {
+  console.log('Thank you for your purchase ' + name + '! We appreciate your purchase.');
+}
+
+sayThanks('Mat');
+
+- Default Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
