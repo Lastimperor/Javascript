@@ -57,19 +57,92 @@ sayThanks('Mat');
 
 - Default Parameters
 
+Default parameters allow parameters to have a predetermined value,
+in case there is no argument passed into the function or if the argument is undefined when called.
 
+function greeting (name = 'stranger') {
+  console.log(`Hello, ${name}!`)
+}
 
+greeting('Nick') // Output: Hello, Nick!
+greeting() // Output: Hello, stranger!
 
+- Return
 
+To pass back information from the function call, we use a return statement. 
+To create a return statement, we use the return keyword followed by the value that we wish to return.
 
+When a return statement is used in a function body, the execution of the function is stopped and the code that follows it will not be executed. 
 
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return 'You need positive integers to calculate area!';
+  }
+  return width * height;
+}
 
+- Helper Functions
 
+We can also use the return value of a function inside another function. 
+These functions being called within another function are often referred to as helper functions.
 
+If we wanted to define a function that converts the temperature from Celsius to Fahrenheit, we could write two functions like:
 
+function multiplyByNineFifths(number) {
+  return number * (9/5);
+};
 
+function getFahrenheit(celsius) {
+  return multiplyByNineFifths(celsius) + 32;
+};
 
+getFahrenheit(15); // Returns 59
 
+- Function Expressions
 
+nother way to define a function is to use a function expression. 
+To define a function inside an expression, we can use the function keyword. 
+In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. 
+A function expression is often stored in a variable in order to refer to it.
+
+const plantNeedsWater = function(day) {
+  if(day === 'Wednesday'){
+     return true
+  } else {
+    return false
+  }
+}
+
+- Arrow Functions
+
+a shorter way to write functions by using the special “fat arrow” () => notation.
+
+Arrow functions remove the need to type out the keyword function every time you need to create a function. 
+Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { }
+
+const rectangleArea = (width, height) => {
+  let area = width * height;
+  return area;
+};
+
+- Concise Body Arrow Functions
+
+JavaScript also provides several ways to refactor arrow function syntax. 
+The most condensed form of the function is known as concise body. 
+
+So if we have a function:
+
+const squareNum = (num) => {
+  return num * num;
+};
+
+We can refactor the function to:
+
+const squareNum = num => num * num;
+Notice the following changes:
+
+The parentheses around num have been removed, since it has a single parameter.
+The curly braces { } have been removed since the function consists of a single-line block.
+The return keyword has been removed since the function consists of a single-line block.
 
 
